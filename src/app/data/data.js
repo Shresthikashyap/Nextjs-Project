@@ -1,5 +1,3 @@
-// data/teamDetails.js
-
 const details = [
     { id: 1, name: 'Yash', role: 'Senior Developer' },
     { id: 2, name: 'Vaibhav', role: 'Backend Developer' },
@@ -7,4 +5,3 @@ const details = [
   ];
   
   export default details;
-  
