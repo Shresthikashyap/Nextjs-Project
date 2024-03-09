@@ -1,18 +1,20 @@
-// pages/aboutus/page.js
+import Link from 'next/link';
+import details from '../data/data';
 
-import { details } from '../data/data';
+export default function AboutUs() {
 
-export default function AboutUsPage() {
-  return (
-    <div>
-      <h1>About Us</h1>
-      <ul>
-        {details.map(member => (
-          <li key={member.id}>
-            <a href={`/aboutus/${member.id}`}>{member.name}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+    return (
+        <div>
+            <h1>Meet Our Developers</h1>
+            <ul>
+                {details.map((dev) => (
+                    <li key={dev.id}>
+                        <Link href={`/aboutus/${dev.id}`}>
+                            <div>{dev.name}</div>
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }

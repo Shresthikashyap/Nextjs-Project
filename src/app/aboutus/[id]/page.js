@@ -1,10 +1,12 @@
-import details from "../page";
+import details from "../../data/data";
 
 export default function DeveloperDetails({ params }) {
-    const { developerId } = params;
+    const { id } = params;
 
-    const developer = details.find((dev) => dev.id === parseInt(developerId));
+    // Find the developer in the details array based on the developerId
+    const developer = details.find((dev) => dev.id === parseInt(id));
 
+    
     if (!developer) {
         return <h1>Developer doesn't exist</h1>;
     }
